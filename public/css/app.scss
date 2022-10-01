@@ -1,0 +1,423 @@
+//common
+html{
+    font-size:100%;/*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;/*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
+}
+body{
+    background-color:#fff;
+    margin:0;
+    padding:0;
+}
+
+/*
+p,
+ul,
+li,
+a{
+  font-size: 18px;
+}*/
+
+p{
+  line-height: 3em;
+}
+
+.h2{
+  font-size: 30px;
+}
+
+.flex-item{
+  display: flex;
+}
+
+.relative{
+  position:relative;
+}
+
+.absolute{
+  position:absolute;
+}
+
+.cnt-btm{
+  margin-bottom: 40px;
+}
+///////////////////////////////////////////////////////////////////////////
+
+//app.blade.php
+
+
+//////////////////////////////////////////////////////////////////////////
+
+//header1.blade.php
+//header2.blade.php
+header{
+  width:100%;
+  height:60px;
+  background-color:#32502E;
+  display:flex;
+  justify-content:space-between; /*メニューを右端に置く方法その１*/
+  padding:0 2%;
+  align-items:center;
+  position:fixed;  /*ヘッダーの位置を固定*/
+  top:0;  /*ヘッダーの位置を固定（上0）*/
+  left:0; /*ヘッダーの位置を左固定（左０）*/
+}
+
+.header-logo{
+    height:100%;
+}
+ul{
+    display:flex;
+    list-style:none;
+}
+li{
+    margin-left:40px;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+.header-nav{
+    margin-left:auto; /*メニューを右端に置く方法その２*/
+}
+.header-nav-item:hover{
+  color:#32502E;
+  background-color:#fff;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+//footer.blade.php
+.footer{
+  text-align: center;
+  background-color:#32502E;
+  color: #fff;
+  height: 60px;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+//index.blade.php
+  /*ctn1*/
+  .cnt1{
+    margin-top: 60px;
+    height:900px;
+
+    .bg-grn{
+      height:700px;
+      background-color: #32502E;
+      align-items: center;
+
+      .cnt1-logo{
+        height:400px;
+      }
+    }
+    
+    .bg-wht{
+      height: 200px;
+      background-color: #fff;
+    }
+  
+    .cnt1-veg{
+      height: 80%;
+      top: 5%;
+      left: 57%;
+    }
+  }
+
+  .cnt-cmn{
+    margin: 0 10%;
+
+  /*ctn2*/
+
+  /*cnt3 cnt4*/
+    .cnt3,
+    .cnt4{
+      .cnt-cards{
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .card {
+        width: 360px;
+        margin: 100px auto 0;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card__img img {
+        width: 100%;
+      }
+
+      .card__content {
+        padding: 15px 25px;
+      }
+
+      .card__content-ttl {
+        font-size: 18px;
+        margin-bottom: 30px;
+        font-weight: 400;
+      }
+
+      .card__content-cat {
+        padding: 5px 10px;
+        background: #008888;
+        margin-bottom: 15px;
+        display: inline-block;
+        /* 要素の文字数に応じて幅が変更されるためにinline-blockを指定 */
+        color: #fff;
+        font-size: 14px;
+      }
+
+      .card__content-tag {
+        font-size: 14px;
+        text-align: right;
+        /* 親要素にtext-alignを適用すると子要素のinline-block要素に適応される */
+      }
+
+      .card__content-tag-item {
+        display: inline-block;
+        /* 横並びにするためにinline-blockを指定 */
+        color: #008888;
+      }
+
+      .card__content-tag-item--last {
+        display: inline-block;
+        /* 横並びにするためにinline-blockを指定 */
+        margin-left: 20px;
+        color: #888888;
+      }
+
+      /* btn*/
+      *,
+      *:before,
+      *:after {
+      -webkit-box-sizing: inherit;
+      box-sizing: inherit;
+      }
+
+      html {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 62.5%;/*rem算出をしやすくするために*/
+      }
+
+      .btn,
+      a.btn,
+      button.btn {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+      position: relative;
+      display: inline-block;
+      padding: 1rem 4rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      color: #212529;
+      border-radius: 0.5rem;
+      }
+
+      a.btn-flat {
+        overflow: hidden;
+        padding: 1.5rem 6rem;
+        color: #fff;
+        border-radius: 0;
+        background: #AC4425;
+      }
+
+      a.btn-flat span {
+        position: relative;
+      }
+
+      a.btn-flat:before {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: 150%;
+        height: 500%;
+        content: '';
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
+        transform: translateX(-98%) translateY(-70%) rotate(135deg);
+        background: #32502E;
+      }
+
+      a.btn-flat:hover:before {
+        -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
+        transform: translateX(-9%) translateY(-25%) rotate(135deg);
+      }
+     }
+  }
+
+/////////////////////////////////////////////////////////////////////////////
+
+//signin.blade.php
+  .login-bg{
+    width: 100%;
+    height: 850px;
+    margin-top: 60px;
+    background-image:url("/img/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+    justify-content: center;
+    align-items: center;
+
+    .login-card{
+      width: 600px;
+      margin: 100px auto 0;
+      background-color: #fff;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+
+      .h2{
+        text-align: center;
+        margin: 30px 0 40px 0;
+      }
+
+      .login-ul{
+        flex-direction: column;
+
+        .login-li{
+          padding-bottom: 20px;
+
+          .icon-email,
+          .icon-pw{
+            width: 25px;
+          }
+        }
+      }
+
+      /*.login-p{
+        color:#212529;
+      }*/
+
+      /*.login-ul{
+        *,
+        *:before,
+        *:after {
+          -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+        }
+        html {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-size: 62.5%;
+        }
+        .btn,
+        a.btn,
+        button.btn {
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1.5;
+          position: relative;
+          display: inline-block;
+          padding: 1rem 4rem;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          text-align: center;
+          vertical-align: middle;
+          text-decoration: none;
+          letter-spacing: 0.1em;
+          color: #212529;
+          border-radius: 0.5rem;
+        }
+        a.btn--green {
+          color: #fff;
+          background-color: #094;
+        }
+        a.btn--green:hover {
+          color: #fff;
+          background: #00a349;
+        }
+        a.btn--green.btn--cubic {
+          border-bottom: 5px solid #00662d;
+        }
+        a.btn--green.btn--cubic:hover {
+          margin-top: 3px;
+          border-bottom: 2px solid #00662d;
+        }
+        a.btn-c {
+          font-size: 2rem;
+          position: relative;
+          padding: 1.5rem 3rem 1.5rem 2rem;
+        }
+        a.btn-c i.fa {
+          margin-right: 1rem;
+      }
+      
+    }
+    */
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+//signup.blade.php
+.signup{
+  width: 100%;
+  height: 850px;
+  margin-top: 60px;
+
+  .signup-li1,
+  .signup-li2
+  {
+    width: 50%;
+    margin:0;
+  }
+
+  .signup-img{
+    height:850px;
+  }
+
+  .signup-li2{
+    justify-content: center;
+    align-items: center;
+    height: 850px;
+  }
+
+  .signup-card{
+    width: 600px;
+    margin: 100px auto 0;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    .h2{
+      text-align: center;
+      margin: 30px 0 40px 0;
+    }
+
+    .signup-ul{
+      flex-direction: column;
+
+      .signup-li{
+        padding-bottom: 20px;
+
+        .person,
+        .icon-email,
+        .icon-pw{
+          width: 25px;
+        }
+      }
+    }
+  }
+}

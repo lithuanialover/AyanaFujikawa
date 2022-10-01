@@ -6,8 +6,8 @@
         <li><a href="#news" class="header-nav-item">News</a></li>
         <li><a href="#about"  class="header-nav-item">About</a></li>
         <li><a class="header-nav-item">|</a></li>
-        <li><a href="" class="header-nav-item">Sign up</a></li>
-        <li><a href=""  class="header-nav-item">Login</a></li>
+        <li><a href="/signup" class="header-nav-item">Sign up</a></li>
+        <li><a href="/signin"  class="header-nav-item">Login</a></li>
       </ul>
     </nav>
 </header>

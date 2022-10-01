@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //shows "home.blade.php"
-    public function index(){
-        return view("index");
+    public function home(){
+        return view("home");
     }
 
     public function signin(){

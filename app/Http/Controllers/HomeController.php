@@ -13,10 +13,7 @@ class HomeController extends Controller
     }
 
     public function signin(){
-        $user = Auth::user();
-        $param = ['user' =>$user];
-
-        return view('signin', $param);
+        return view('signin');
     }
 
     public function signup(){
@@ -24,6 +21,9 @@ class HomeController extends Controller
     }
 
     public function shopping(){
-        return view("shopping");
+        $user = Auth::user();
+        $param = ['user' =>$user];
+        
+        return view("shopping", $param);
     }
 }

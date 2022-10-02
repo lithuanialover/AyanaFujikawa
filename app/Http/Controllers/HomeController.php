@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;//追記
 
 class HomeController extends Controller
 {
@@ -12,7 +13,10 @@ class HomeController extends Controller
     }
 
     public function signin(){
-        return view("signin");
+        $user = Auth::user();
+        $param = ['user' =>$user];
+
+        return view('signin', $param);
     }
 
     public function signup(){

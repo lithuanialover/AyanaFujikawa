@@ -8,7 +8,7 @@ Route::get('/signin',[HomeController::class, 'signin']);
 Route::get('/signup',[HomeController::class, 'signup']);
 Route::get('/shopping',[HomeController::class, 'shopping']);
 
-/**　↓template↓ 　*/
+/**　↓Laravel Breeze↓ 　*/
 Route::get('/', function () {
     return view('welcome');
 });

@@ -265,9 +265,6 @@ a {
   background-color: #fff;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  /*.login-p{
-    color:#212529;
-  }*/
   /*.login-ul{
       *,
       *:before,
@@ -330,18 +327,17 @@ a {
   }
   */
 }
-.login-bg .login-card .h2 {
+.login-bg .login-card .h2,
+.login-bg .login-card .error-msg {
   text-align: center;
   margin: 30px 0 40px 0;
 }
-.login-bg .login-card .login-ul {
+.login-bg .login-card .login-table {
   flex-direction: column;
+  margin: 0 30px 30px 30px;
 }
-.login-bg .login-card .login-ul .login-li {
-  padding-bottom: 20px;
-}
-.login-bg .login-card .login-ul .login-li .icon-email,
-.login-bg .login-card .login-ul .login-li .icon-pw {
+.login-bg .login-card .login-table .login-tr .icon-email,
+.login-bg .login-card .login-table .login-tr .icon-pw {
   width: 25px;
 }
 

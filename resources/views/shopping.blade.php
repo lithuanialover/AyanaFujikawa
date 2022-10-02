@@ -1,4 +1,4 @@
-@extends('layouts.format')
+@extends('layouts.format-2')
 
 @section('main')
 <h1>shopping</h1>

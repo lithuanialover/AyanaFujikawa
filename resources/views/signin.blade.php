@@ -4,14 +4,18 @@
   <div class="login-bg flex-item">
     <div class="login-card">
       <h2 class="h2">Login</h2>
-      <ul class="login-ul flex-item">
-        <li class="login-li"><a href="" class="btn btn--orange btn-c flex-item"><img src="/img/email.PNG" alt="" class="icon-email"><input type="email" id="email"
-            pattern=".+@globex\.com" size="30" required placeholder="email"></a></li>
-        <li class="login-li"><a href="" class="btn btn--orange btn-c"><img src="/img/pw.PNG" alt="" class="icon-pw"><input type="password" id="pass" name="password"
-            minlength="8" required placeholder="password"></a></li>
-        <li class="login-li"><a href="" class="btn btn--orange btn-c"><input type="submit" value="Sign in"></a></li>
-        <!--<li>会員登録は<a href="/signup"><p class="login-p">こちら</p></a></li>-->
-      </ul>
+      <p class="error-msg">{{$text}}</p>
+      <form action="/signin" method="post">
+        <table class="login-table flex-item">
+          @csrf
+          <tr class="login-tr"><th><img src="/img/email.PNG" alt="" class="icon-email"></th><td><input type="text"
+                name="email" required placeholder="email"></td></tr>
+          <tr class="login-tr"><th><img src="/img/pw.PNG" alt="" class="icon-pw"></th><td><input type="password"
+                name="password" required placeholder="password"></td></tr>
+          <tr class="login-tr"><th></th><td><input type="submit"
+                value="送信" class="btn btn--orange btn-c"></td></tr>
+        </table>
+      </form>
     </div>
   </div>
 @endsection

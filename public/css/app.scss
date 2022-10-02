@@ -283,16 +283,17 @@ a{
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
 
-      .h2{
+      .h2,
+      .error-msg{
         text-align: center;
         margin: 30px 0 40px 0;
       }
 
-      .login-ul{
+      .login-table{
         flex-direction: column;
+        margin: 0 30px 30px 30px;
 
-        .login-li{
-          padding-bottom: 20px;
+        .login-tr{
 
           .icon-email,
           .icon-pw{
@@ -301,9 +302,6 @@ a{
         }
       }
 
-      /*.login-p{
-        color:#212529;
-      }*/
 
       /*.login-ul{
         *,

@@ -16,8 +16,8 @@ class HomeController extends Controller
         return view('signin');
     }
 
-    public function signup(){
-        return view("signup");
+    public function register(){
+        return view("register");
     }
 
     public function shopping(){

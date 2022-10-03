@@ -7,7 +7,7 @@
         <li><a href="#about"  class="header-nav-item">About</a></li>
         <li><a class="header-nav-item">|</a></li>
         <li><a href="/register" class="header-nav-item">Sign Up</a></li>
-        <li><a href="/signin"  class="header-nav-item">Sign In</a></li>
+        <li><a href="/login"  class="header-nav-item">Sign In</a></li>
       </ul>
     </nav>
 </header>

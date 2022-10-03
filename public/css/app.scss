@@ -266,6 +266,9 @@ a{
 /////////////////////////////////////////////////////////////////////////////
 
 //signin.blade.php
+.pw-request{
+  color: #AC4425;
+}
   .login-bg{
     width: 100%;
     height: 850px;
@@ -289,18 +292,31 @@ a{
         margin: 30px 0 40px 0;
       }
 
-      .login-table{
+      .login-ul{
         flex-direction: column;
-        margin: 0 30px 30px 30px;
-
-        .login-tr{
-
+  
+        .login-li{
+          padding-bottom: 20px;
+  
+          .person,
           .icon-email,
           .icon-pw{
             width: 25px;
           }
         }
       }
+      // .login-table{
+      //   flex-direction: column;
+      //   margin: 0 30px 30px 30px;
+
+      //   .login-tr{
+
+      //     .icon-email,
+      //     .icon-pw{
+      //       width: 25px;
+      //     }
+      //   }
+      // }
 
 
       /*.login-ul{
@@ -368,7 +384,11 @@ a{
 }
 
 /////////////////////////////////////////////////////////////////////////////
+//login.blade.php
 
+
+
+/////////////////////////////////////////////////////////////////////////////
 //signup.blade.php
 .signup{
   width: 100%;

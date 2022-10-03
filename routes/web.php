@@ -4,13 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 Route::get('/home',[HomeController::class, 'home']);
-// Route::get('/signin',[HomeController::class, 'signin']);
-Route::get('/signin', [HomeController::class,'check']);
-Route::post('/signin', [HomeController::class,'checkUser']);
-Route::get('/register',[HomeController::class, 'register']);
+// Route::get('/signin', [HomeController::class,'check']);
+// Route::post('/signin', [HomeController::class,'checkUser']);
+// Route::get('/register',[HomeController::class, 'register']);
 Route::get('/shopping',[HomeController::class, 'shopping'])->middleware('auth');
 
-/**　↓Laravel Breeze↓ 　*/
+
+/**　↓Laravel Breeze↓ Login & Register & Logout*/
 Route::get('/', function () {
     return view('welcome');
 });

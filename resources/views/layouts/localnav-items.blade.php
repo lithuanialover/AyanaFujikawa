@@ -1,6 +1,6 @@
 <ul class="gnav">
   <li>
-      <a href="">Menu1</a>
+      <a href="">根菜類</a>
       <ul>
           <li>
               <a href="">Child1</a>

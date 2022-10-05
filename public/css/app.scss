@@ -439,6 +439,7 @@ a{
 //localnav-items.blade.php
 .local-nav{
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 .gnav {
   display: flex;
@@ -542,3 +543,98 @@ a{
 
 /////////////////////////////////////////////////////////////////////////////
 //shopping.blade.php
+#callender{
+  display: block;
+}
+
+.callender_box {
+  margin-bottom: 10px;
+}
+
+.open_btn{
+  cursor: default;
+  padding: 1%;
+  margin-bottom: 5px;
+  background: #FDF8EB;
+  position: relative;
+}
+
+.boeber_w {
+  border-bottom: solid 2px #fff;
+}
+
+#callender .callender_wrap .callender_box .open table tbody tr {
+  border-bottom: dashed 1px #B7A88F;
+}
+
+.back_vedetable {
+  background: #FFFDF8;
+}
+
+.callender-table{
+  width: 100%;
+}
+
+.boeber_w th {
+  border-right: solid 2px #fff;
+}
+
+.callender_box .open table tbody tr th .item {
+  left: 0;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.monthly {
+  font-size: 1.4rem;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.bule {
+  background: #D4E8F7;
+}
+
+.callender_box .open table tbody tr td {
+  padding: 1% 0;
+}
+
+td {
+  width: calc( 75% / 36 );
+  padding: 2% 0;
+  text-align: center;
+  border-right: solid 1px #B7A88F;
+  letter-spacing: normal;
+  font-size: 1.2rem;
+}
+
+.callender_box .open table tbody tr.boeber_w td {
+  border-right: solid 2px #fff;
+}
+
+.callender_box .open table tbody tr td.pink {
+  background: #FDE5F9;
+}
+
+.callender_box .open table tbody tr td.green {
+  background: #D9F4E4;
+}
+
+.callender_box .open table tbody tr td.orange_back {
+  background: #FDE0BE;
+}
+
+.he_20 {
+  padding: 0;
+  height: 20px;
+}
+
+.callender-p{
+  color: #212529;
+}

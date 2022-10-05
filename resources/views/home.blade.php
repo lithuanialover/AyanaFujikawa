@@ -28,7 +28,7 @@
               <img src="img/card1.jpg" alt="">
           </div>
           <div class="card__content">
-              <div class="card__content-cat">KOMATSUNA</div>
+              <div class="card__content-cat">AAA農園</div>
               <h2 class="card__content-ttl">Fresh Komatsuna</h2>
               <div class="card__content-tag">
                   <p class="card__content-tag-item">100g</p>
@@ -41,7 +41,7 @@
               <img src="img/card2.jpg" alt="">
           </div>
           <div class="card__content">
-              <div class="card__content-cat">Tougarashi</div>
+              <div class="card__content-cat">BBB農園</div>
               <h2 class="card__content-ttl">Fresh Tougarashi</h2>
               <div class="card__content-tag">
                   <p class="card__content-tag-item">100g</p>
@@ -54,7 +54,7 @@
               <img src="img/card2.jpg" alt="">
           </div>
           <div class="card__content">
-              <div class="card__content-cat">Tougarashi</div>
+              <div class="card__content-cat">CCC農園</div>
               <h2 class="card__content-ttl">Fresh Tougarashi</h2>
               <div class="card__content-tag">
                   <p class="card__content-tag-item">100g</p>
@@ -75,7 +75,7 @@
               <img src="img/card1.jpg" alt="">
           </div>
           <div class="card__content">
-              <div class="card__content-cat">KOMATSUNA</div>
+              <div class="card__content-cat">AAA農園</div>
               <h2 class="card__content-ttl">Fresh Komatsuna</h2>
               <div class="card__content-tag">
                   <p class="card__content-tag-item">100g</p>
@@ -88,7 +88,7 @@
               <img src="img/card2.jpg" alt="">
           </div>
           <div class="card__content">
-              <div class="card__content-cat">Tougarashi</div>
+              <div class="card__content-cat">BBB農園</div>
               <h2 class="card__content-ttl">Fresh Tougarashi</h2>
               <div class="card__content-tag">
                   <p class="card__content-tag-item">100g</p>
@@ -101,7 +101,7 @@
               <img src="img/card2.jpg" alt="">
           </div>
           <div class="card__content">
-              <div class="card__content-cat">Tougarashi</div>
+              <div class="card__content-cat">CCC農園</div>
               <h2 class="card__content-ttl">Fresh Tougarashi</h2>
               <div class="card__content-tag">
                   <p class="card__content-tag-item">100g</p>

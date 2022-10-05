@@ -16,6 +16,10 @@
     @component('layouts.header-2')
     @endcomponent
     <main class="main">
+        <div class="local-nav">
+            @component('layouts.localnav-items')
+            @endcomponent 
+        </div>
         @yield('main')
     </main>
     @component('layouts.footer')

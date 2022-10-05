@@ -1,7 +1,12 @@
 @extends('layouts.format-2')
 
 @section('main')
-<h1>shopping</h1>
+
+<div class="local-nav">
+  @component('layouts.localnav-items')
+  @endcomponent 
+</div>
+
 <h1>shopping</h1>
 <h1>shopping</h1>
 <h1>shopping</h1>
@@ -20,5 +25,9 @@
 <p>ログインしてください。（<a href="/login">ログイン</a>｜
   <a href="/register">登録</a>）</p>
 @endif
+
+
+
+
 
 @endsection

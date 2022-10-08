@@ -18,7 +18,7 @@
     <main class="main">
         <div class="local-nav">
             @component('layouts.localnav-items')
-            @endcomponent 
+            @endcomponent
         </div>
         @yield('main')
     </main>

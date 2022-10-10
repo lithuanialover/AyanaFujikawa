@@ -10,48 +10,8 @@
             <img src="img/card1.jpg" alt="">
         </div>
         <div class="card__content">
-            <div class="card__content-cat">AAA農園</div>
-            <h2 class="card__content-ttl">Fresh Komatsuna</h2>
-            <div class="card__content-tag">
-                <p class="card__content-tag-item">100g</p>
-                <p class="card__content-tag-item card__content-tag-item--last">500yen</p>
+            <div class="card__content-cat">AAA農園
             </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__img">
-            <img src="img/card2.jpg" alt="">
-        </div>
-        <div class="card__content">
-            <div class="card__content-cat">BBB農園</div>
-            <h2 class="card__content-ttl">Fresh Tougarashi</h2>
-            <div class="card__content-tag">
-                <p class="card__content-tag-item">100g</p>
-                <p class="card__content-tag-item card__content-tag-item--last">500yen</p>
-            </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__img">
-            <img src="img/card2.jpg" alt="">
-        </div>
-        <div class="card__content">
-            <div class="card__content-cat">CCC農園</div>
-            <h2 class="card__content-ttl">Fresh Tougarashi</h2>
-            <div class="card__content-tag">
-                <p class="card__content-tag-item">100g</p>
-                <p class="card__content-tag-item card__content-tag-item--last">500yen</p>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="cnt-cards flex-item">
-      <div class="card">
-        <div class="card__img">
-            <img src="img/card1.jpg" alt="">
-        </div>
-        <div class="card__content">
-            <div class="card__content-cat">AAA農園</div>
             <h2 class="card__content-ttl">Fresh Komatsuna</h2>
             <div class="card__content-tag">
                 <p class="card__content-tag-item">100g</p>
@@ -100,7 +60,7 @@
               <tr class="boeber_w">
                 <th class="back_vedetable">
                   <div class="item">項目</div>
-                  <div class="monthly sp_only">月</div>
+                  {{-- <div class="monthly sp_only">月</div> --}}
                 </th>
                 <td class="bule" colspan="3">1<span class="pc_tab_only">月</span></td>
                 <td class="bule" colspan="3">2<span class="pc_tab_only">月</span></td>

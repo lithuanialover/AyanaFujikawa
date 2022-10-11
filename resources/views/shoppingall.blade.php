@@ -14,14 +14,15 @@
               <div class="card__content-cat">{{$product->farmer}}</div>
               <h2 class="card__content-ttl">{{$product->product}}</h2>
               <div class="card__content-tag">
-                  <p class="card__content-tag-item">{{$product->volume}}</p>
-                  <p class="card__content-tag-item card__content-tag-item--last">{{$product->price}}</p>
+                  <p class="card__content-tag-item">{{$product->volume}}g</p>
+                  <p class="card__content-tag-item card__content-tag-item--last">{{$product->price}}円</p>
               </div>
           </div>
         </div>
       @endforeach
     </div>
   </div>
+  {{ $products->links() }}
 </div>
 
 @if (Auth::check())

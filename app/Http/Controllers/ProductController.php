@@ -15,6 +15,10 @@ class ProductController extends Controller
 
         //products_tableをshoppingall.blade.phpに表示
         $products = Product::all();
+
+        // products_tableのpaginateメソッド
+        $products = Product::simplePaginate(9);
+
         return view('shoppingall', ['products' => $products], $param);
     }
 }

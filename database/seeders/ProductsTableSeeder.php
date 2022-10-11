@@ -62,5 +62,61 @@ class ProductsTableSeeder extends Seeder
             'volume' => '500',
             'price' => '500'
         ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
+        Product::create($param);
+        $param = [
+            'farmer' => 'tony',
+            'product' => 'こまつな',
+            'img' => 'img/card1.jpg',
+            'volume' => '500',
+            'price' => '500'
+        ];
     }
 }

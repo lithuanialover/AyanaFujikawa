@@ -96,6 +96,22 @@ a {
   height: 60px;
 }
 
+.pagination {
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.pagination .page-item {
+  line-height: 2;
+  border: solid 1px #32502E; /*線*/
+}
+.pagination .page-link {
+  background-color: #fff;
+  color: #32502E;
+  font-size: 20px;
+  padding: 5px;
+}
+
 /*ctn1*/
 .cnt1 {
   margin-top: 60px;

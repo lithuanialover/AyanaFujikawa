@@ -23,17 +23,17 @@ class ProductController extends Controller
         return view('shoppingall', ['products' => $products], $param);
     }
 
-    public function details(){
+    public function details($id){
         // ログインユーザー名表示
         $user = Auth::user();
         $param = ['user' =>$user];
 
-        //products_tableをshoppingall.blade.phpに表示
-        $products = Product::all();
+        //特定idをproducts_tableから取り出し、shoppingdetails.blade.phpに表示
+        $products = Product::find($id);
 
-        // products_tableのpaginateメソッド
-        $products = Product::Paginate(9);
-
-        return view('shoppingdetails', ['products' => $products], $param);
+        // return view('shoppingdetails', ['products' => $products], $param);
+        
+        //idごとに見せる用 
+        return view('shoppingdetails', compact('products'), $param);
     }
 }

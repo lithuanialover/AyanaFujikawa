@@ -6,6 +6,7 @@
   <div class="cnt3 cnt-btm">
     <div class="cnt-cards flex-item">
       @foreach ($products as $product)
+      <a href="{{ route('details', ['id'=>$product->id]) }}">
         <div class="card">
           <div class="card__img">
             {{$product->img}}
@@ -19,6 +20,7 @@
               </div>
           </div>
         </div>
+      </a>
       @endforeach
     </div>
   </div>

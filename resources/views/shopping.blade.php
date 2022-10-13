@@ -60,7 +60,6 @@
               <tr class="boeber_w">
                 <th class="back_vedetable">
                   <div class="item">項目</div>
-                  {{-- <div class="monthly sp_only">月</div> --}}
                 </th>
                 <td class="bule" colspan="3">1<span class="pc_tab_only">月</span></td>
                 <td class="bule" colspan="3">2<span class="pc_tab_only">月</span></td>

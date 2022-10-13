@@ -3,6 +3,35 @@
 
 @section('main')
 <div class="cnt-cmn">
+    @foreach ($products as $product)
+        <div class="details flex-item">
+            <div class="details-img">
+                {{$products->img}}
+            </div>
+            <div class="details-cnt">
+                <h2>{{$products->product}}</h2>
+                <p>{{$products->farmer}}</p>
+                <ul>
+                    <li><p>{{$products->volume}}g</p></li>
+                    <li><p>税込{{$products->price}}円</p></li>
+                </ul>
+                <div class="details-btn">
+                    <a href="#">ボタン</a>
+                </div>
+            </div>
+        </div>
+        <div class="details-comments">
+            <h3>農家からのメッセージ</h3>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            </p>
+        </div>
+    @endforeach
+</div>
+{{-- <div class="cnt-cmn">
   <div class="cnt3 cnt-btm">
     <div class="cnt-cards flex-item">
       @foreach ($products as $product)
@@ -22,5 +51,5 @@
       @endforeach
     </div>
   </div>
-</div>
+</div> --}}
 @endsection

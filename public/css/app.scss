@@ -183,6 +183,7 @@ a{
       }
 
       .card__content-ttl {
+        color: #333;
         font-size: 18px;
         margin-bottom: 30px;
         font-weight: 400;
@@ -568,6 +569,17 @@ a{
 
 /////////////////////////////////////////////////////////////////////////////
 //shopping.blade.php
+.all-btn a{
+  display: block;
+  padding: 10px;
+  background: #f2f2f2;
+  border: 1px solid #999;
+  color: #333;
+  width: 200px;
+  /*コレ*/margin-left: auto;
+  text-align: center;
+}
+
 #callender{
   display: block;
 }
@@ -667,37 +679,51 @@ td {
 /////////////////////////////////////////////////////////////////////////////
 //shoppingdetails.blade.php
 .details{
-  justify-content: space-between;
-  margin-bottom: 50px;
+  .cnt-details{
+    justify-content: space-between;
+    margin-bottom: 50px;
 
-  .details-img{
-    width: 40%;
+    .details-img{
+      width: 40%;
+    }
+
+    .details-cnt{
+      width: 50%;
+
+      ul{
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .details-btn a{
+          display: block;
+          padding: 10px;
+          background: #f2f2f2;
+          border: 1px solid #999;
+          color: #333;
+          width: 200px;
+          /*コレ*/margin-left: auto;
+          text-align: center;
+      }
+    }
   }
 
-  .details-cnt{
-    width: 50%;
-
-    ul{
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
+  .details-comments{
+    h3{
+      font-weight: bold;
     }
+  }
 
-    .details-btn a{
-        display: block;
-        padding: 10px;
-        background: #f2f2f2;
-        border: 1px solid #999;
-        color: #333;
-        width: 200px;
-        /*コレ*/margin-left: auto;
-        text-align: center;
-    }
+  .back-btn a{
+    display: block;
+    padding: 10px;
+    background: #f2f2f2;
+    border: 1px solid #999;
+    color: #333;
+    width: 200px;
+    /*コレ*/margin-left: auto;
+    text-align: center;
   }
 }
 
-.details-comments{
-  h3{
-    font-weight: bold;
-  }
-}

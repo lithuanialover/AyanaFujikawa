@@ -20,6 +20,8 @@ class ProductController extends Controller
         // products_tableのpaginateメソッド
         $products = Product::Paginate(9);
 
+        // img
+
         return view('shoppingall', ['products' => $products], $param);
     }
 

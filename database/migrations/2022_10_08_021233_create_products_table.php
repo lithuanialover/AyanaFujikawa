@@ -21,6 +21,7 @@ return new class extends Migration
             $table->binary('img');
             $table->integer('volume');
             $table->integer('price');
+            $table->string('comments');
             $table->timestamps();
         });
     }

@@ -24,7 +24,7 @@ class ProductController extends Controller
 
         return view('shoppingall', ['products' => $products], $param);
     }
-// ー－－－施策②
+
     public function details($id){
         // ログインユーザー名表示
         $user = Auth::user();
@@ -32,20 +32,10 @@ class ProductController extends Controller
 
         //特定idをproducts_tableから取り出し、shoppingdetails.blade.phpに表示<施策①>
         $products = Product::findOrFail($id);
+
+        //Laravel shopping cart 下を表示させると「Property [img] does not exist on this collection instance.」エラーがでる。
+        // $products = Product::all();
+
         return view('shoppingdetails', ['products' => $products], $param);
     }
-// ー－－－施策①
-    // public function details($id){
-    //     // ログインユーザー名表示
-    //     $user = Auth::user();
-    //     $param = ['user' =>$user];
-
-    //     //特定idをproducts_tableから取り出し、shoppingdetails.blade.phpに表示<施策①>
-    //     $products = Product::find($id);
-
-    //     // return view('shoppingdetails', ['products' => $products], $param);
-        
-    //     //idごとに見せる用<施策①>
-    //     return view('shoppingdetails', compact('products'), $param);
-    // }
 }

@@ -11,10 +11,11 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        'product',
+        'name',
         'img',
         'volume',
         'price',
+        'comments',
     ];
 
     // Eloquent; モデルに関連付けるテーブル

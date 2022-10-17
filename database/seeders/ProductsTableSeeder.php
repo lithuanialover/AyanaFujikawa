@@ -17,7 +17,7 @@ class ProductsTableSeeder extends Seeder
     {
         $param = [
             'farmer' => 'AAA農園',
-            'product' => '山の芋',
+            'name' => '山の芋',
             'img' => 'img/yamanoimo.jpg',
             'volume' => '500',
             'price' => '500',
@@ -26,7 +26,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'BBB農園',
-            'product' => '大黒本しめじ',
+            'name' => '大黒本しめじ',
             'img' => 'img/okuroshimeji.jpg',
             'volume' => '500',
             'price' => '500',
@@ -36,7 +36,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'CCC農園',
-            'product' => '加茂茄子',
+            'name' => '加茂茄子',
             'img' => 'img/kamonasu.jpg',
             'volume' => '500',
             'price' => '500',
@@ -45,7 +45,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'DDD農園',
-            'product' => '辛味大根',
+            'name' => '辛味大根',
             'img' => 'img/karami.jpg',
             'volume' => '500',
             'price' => '500',
@@ -54,7 +54,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'EEE農園',
-            'product' => '海老芋',
+            'name' => '海老芋',
             'img' => 'img/ebiimo.jpg',
             'volume' => '500',
             'price' => '500',
@@ -63,7 +63,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'FFF農園',
-            'product' => '万願寺とうがらし',
+            'name' => '万願寺とうがらし',
             'img' => 'img/manganji.jpg',
             'volume' => '500',
             'price' => '500',
@@ -72,7 +72,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'GGG農園',
-            'product' => '聖護院大根',
+            'name' => '聖護院大根',
             'img' => 'img/shogoin.jpg',
             'volume' => '500',
             'price' => '500',
@@ -81,7 +81,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'HHH農園',
-            'product' => '金時人参',
+            'name' => '金時人参',
             'img' => 'img/kintoki.jpg',
             'volume' => '500',
             'price' => '500',
@@ -90,7 +90,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'III農園',
-            'product' => '京水菜',
+            'name' => '京水菜',
             'img' => 'img/mizuna.jpg',
             'volume' => '500',
             'price' => '500',
@@ -99,7 +99,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'JJJ農園',
-            'product' => '鹿ヶ谷かぼちゃ',
+            'name' => '鹿ヶ谷かぼちゃ',
             'img' => 'img/okuroshimeji.jpg',
             'volume' => '500',
             'price' => '500',
@@ -108,7 +108,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'KKK農園',
-            'product' => '菜の花',
+            'name' => '菜の花',
             'img' => 'img/nanohana.jpg',
             'volume' => '500',
             'price' => '500',
@@ -117,7 +117,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'LLL農園',
-            'product' => '畑菜',
+            'name' => '畑菜',
             'img' => 'img/hatakena.jpg',
             'volume' => '500',
             'price' => '500',
@@ -126,7 +126,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'MMM農園',
-            'product' => '壬生菜',
+            'name' => '壬生菜',
             'img' => 'img/mibuna.jpg',
             'volume' => '500',
             'price' => '500',
@@ -135,7 +135,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'NNN農園',
-            'product' => 'くわい',
+            'name' => 'くわい',
             'img' => 'img/kuwai.jpg',
             'volume' => '500',
             'price' => '500',
@@ -144,7 +144,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'OOO農園',
-            'product' => '堀川ごぼう',
+            'name' => '堀川ごぼう',
             'img' => 'img/horikawa.jpg',
             'volume' => '500',
             'price' => '500',
@@ -153,7 +153,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'PPP農園',
-            'product' => '堀川ごぼう',
+            'name' => '堀川ごぼう',
             'img' => 'img/horikawa.jpg',
             'volume' => '500',
             'price' => '500',
@@ -162,7 +162,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'QQQ農園',
-            'product' => '京たけのこ',
+            'name' => '京たけのこ',
             'img' => 'img/takenoko.jpg',
             'volume' => '500',
             'price' => '500',
@@ -171,7 +171,7 @@ class ProductsTableSeeder extends Seeder
         Product::create($param);
         $param = [
             'farmer' => 'RRR農園',
-            'product' => '九条ネギ',
+            'name' => '九条ネギ',
             'img' => 'img/kujonegi.jpg',
             'volume' => '500',
             'price' => '500',

@@ -19,7 +19,9 @@ Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.up
 Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 
-/**　↓Laravel Breeze↓ Login & Register & Logout*/
+
+
+/** ↓Laravel Breeze↓ Login & Register & Logout*/
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,4 +30,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 require __DIR__.'/auth.php';
+// require __DIR__.'/farmer.php'; //farmer認証(マルチ認証)
+Route::prefix('farmer')->name('farmer.')->group(function(){
+    require __DIR__.'/farmer.php';
+});

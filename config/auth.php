@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'farmer' => [
+            'driver' => 'session',
+            'provider' => 'farmers',
+        ],
     ],
 
     /*
@@ -65,6 +70,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'farmers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Farmer::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -89,6 +98,13 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'farmers' => [
+            'provider' => 'farmers',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

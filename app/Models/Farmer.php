@@ -6,10 +6,17 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Auth\Notifications\FarmerResetPassword as ResetPasswordNotification;
 
 class Farmer extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
+
+    public function sendPasswordResetNotification($token){
+
+        $this->notify(new ResetPasswordNotification($token));
+    }
 
 /**
      * The attributes that are mass assignable.

@@ -1,4 +1,4 @@
-@extends('layouts.format')
+@extends('layouts.farmer-format2')
 
 @section('main')
 <div class="login-bg flex-item">

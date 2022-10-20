@@ -17,16 +17,19 @@ class RedirectIfAuthenticated
      * @param  string|null  ...$guards
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+
     public function handle(Request $request, Closure $next, ...$guards)
     {
+        
         $guards = empty($guards) ? [null] : $guards;
-
+    
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                if($guard == 'farmer') return redirect(RouteServiceProvider::FARMER_HOME);
                 return redirect(RouteServiceProvider::HOME);
             }
         }
-
+    
         return $next($request);
     }
 }

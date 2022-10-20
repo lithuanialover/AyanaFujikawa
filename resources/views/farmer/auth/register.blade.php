@@ -1,4 +1,4 @@
-@extends('layouts.format')
+@extends('layouts.farmer-format2')
 
 @section('main')
 <div class="signup">
@@ -39,7 +39,7 @@
             </li>
 
             <li class="signup-li">
-              <a class="btn btn--orange btn-c" href="{{ route('farmer.login') }}">
+              <a class="btn btn--orange btn-c a-signin" href="{{ route('farmer.login') }}">
                   {{ __('Already registered?') }}
               </a>
               <x-primary-button class="ml-4">{{ __('Register') }}</x-primary-button>

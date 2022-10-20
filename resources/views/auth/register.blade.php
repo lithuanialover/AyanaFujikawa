@@ -39,7 +39,7 @@
             </li>
 
             <li class="signup-li">
-              <a class="btn btn--orange btn-c" href="{{ route('login') }}">
+              <a class="btn btn--orange btn-c a-signin" href="{{ route('login') }}">
                   {{ __('Already registered?') }}
               </a>
               <x-primary-button class="ml-4">{{ __('Register') }}</x-primary-button>

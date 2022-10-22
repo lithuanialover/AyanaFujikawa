@@ -49,7 +49,7 @@
   </div>
   <div class="all-btn">
     <a href="/shopping/all">全ての商品を見る</a>
-</div>
+  </div>
   <section id="callender" class="box cnt-btm">
     <h2>旬の京野菜一覧</h2>
     <div class="callender_wrap active">

@@ -9,6 +9,7 @@ use Illuminate\Pagination\Paginator;//products_table Paginateメソッド
 
 class ProductController extends Controller
 {
+    /**User画面 */
     public function products(){
         // ログインユーザー名表示
         $user = Auth::user();
@@ -35,7 +36,19 @@ class ProductController extends Controller
 
         //Laravel shopping cart 下を表示させると「Property [img] does not exist on this collection instance.」エラーがでる。
         // $products = Product::all();
-
         return view('shoppingdetails', ['products' => $products], $param);
     }
+
+    /**Farmer画面 */
+    //shows "farmer-product-register.blade.php"
+    public function farmerRegister(){
+            //products_tableをshoppingall.blade.phpに表示
+            $products = Product::all();
+
+            // products_tableのpaginateメソッド
+            $products = Product::Paginate(9);
+
+        return view("farmer-product-register", ['products' => $products],);
+    }
+
 }

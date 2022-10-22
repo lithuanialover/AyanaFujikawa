@@ -11,5 +11,4 @@ class FarmerController extends Controller
     public function farmerHome(){
         return view("farmerHome");
     }
-
 }

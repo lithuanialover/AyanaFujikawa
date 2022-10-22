@@ -10,7 +10,7 @@ use App\Http\Controllers\FarmerController;
 Route::get('/home',[HomeController::class, 'home']);
 Route::get('/shopping',[HomeController::class, 'shopping'])->middleware('auth');
 Route::get('/shopping/all',[ProductController::class, 'products'])->middleware('auth');
-Route::get('/shopping/details/{id}/', [ProductController::class, 'details'])->name('products.list')->middleware('auth');; // ->name('products.list') 追記shopping cart用に
+Route::get('/shopping/details/{id}/', [ProductController::class, 'details'])->name('products.list')->middleware('auth'); // ->name('products.list') 追記shopping cart用に
 // Laravel Shopping cart
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
@@ -20,7 +20,7 @@ Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear'
 
 /**Farmers画面*/
 Route::get('/farmer/home',[FarmerController::class, 'farmerHome']);
-
+Route::get('/farmer/product/register',[ProductController::class, 'farmerRegister'])->middleware('auth:farmer');
 
 
 

@@ -27,6 +27,7 @@
     </div>
     {{ $products->links() }}
     <br>
+    
     <div class="all-btn">
         <a href="/farmer/dashboard">ホーム画面に戻る</a>
     </div>

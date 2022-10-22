@@ -1,36 +1,78 @@
 @extends('layouts.farmer-format')
 
 @section('main')
-
-<h2>農家;Product Register</h2>
-<div class="cnt-cmn">
-    <div class="cnt3 cnt-btm">
-      <div class="cnt-cards flex-item">
-        @foreach ($products as $product)
-        <a href="/shopping/details/{{$product->id}}">
-          <div class="card">
-            <div class="card__img">
-              {{$product->img}}
-            </div>
-            <div class="card__content">
-                <div class="card__content-cat">{{$product->farmer}}</div>
-                <h2 class="card__content-ttl">{{$product->name}}</h2>
-                <div class="card__content-tag">
-                    <p class="card__content-tag-item">{{$product->volume}}g</p>
-                    <p class="card__content-tag-item card__content-tag-item--last">{{$product->price}}円</p>
-                </div>
-            </div>
-          </div>
-        </a>
-        @endforeach
-      </div>
-    </div>
-    {{ $products->links() }}
-    <br>
-    
-    <div class="all-btn">
-        <a href="/farmer/dashboard">ホーム画面に戻る</a>
-    </div>
+<div class="cnt-top">
+  <h2>商品登録</h2>
+  @if (count($errors) > 0)
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>
+      {{$error}}
+    </li>
+    @endforeach
+  </ul>
+  @endif
+  <form action="/farmer/product/add" method="post" enctype="multipart/form-data">
+    <table>
+      @csrf
+      <tr>
+        <th>
+          name
+        </th>
+        <td>
+          <input type="text" name="name">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          farmer
+        </th>
+        <td>
+          <input type="text" name="farmer">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          img
+        </th>
+        <td>
+          <input type="file" name="img">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          volume
+        </th>
+        <td>
+          <input type="text" name="volume">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          price
+        </th>
+        <td>
+          <input type="text" name="price">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          comments
+        </th>
+        <td>
+          <input type="textarea" cols="50" rows="10" name="comments">
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>
+          <button>送信</button>
+        </td>
+    </table>
+  </form>
+  <br>
+  <div class="all-btn">
+    <a href="/farmer/dashboard">ホーム画面に戻る</a>
   </div>
-
+</div>
 @endsection

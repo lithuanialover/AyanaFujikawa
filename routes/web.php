@@ -20,7 +20,12 @@ Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear'
 
 /**Farmers画面*/
 Route::get('/farmer/home',[FarmerController::class, 'farmerHome']);
+//商品登録画面
 Route::get('/farmer/product/register',[ProductController::class, 'farmerRegister'])->middleware('auth:farmer');
+Route::get('/farmer/product/lists',[ProductController::class, 'productLists'])->middleware('auth:farmer');
+Route::get('/farmer/product/add', [ProductController::class, 'productAdd'])->middleware('auth:farmer');
+Route::post('/farmer/product/add', [ProductController::class, 'productCreate'])->middleware('auth:farmer');
+
 
 
 

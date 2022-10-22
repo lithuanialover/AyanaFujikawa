@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;//追記
 use App\Models\Product;//追記
 use Illuminate\Pagination\Paginator;//products_table Paginateメソッド
+use App\Http\Requests\ProductRequest;//追記
 
 class ProductController extends Controller
 {
@@ -40,15 +41,32 @@ class ProductController extends Controller
     }
 
     /**Farmer画面 */
-    //shows "farmer-product-register.blade.php"
+    public function productLists()
+    {
+        $products = Product::all();
+        // products_tableのpaginateメソッド
+        $products = Product::Paginate(9);
+
+        return view('farmer-product-lists', ['products' => $products]);
+    }
+
     public function farmerRegister(){
+
             //products_tableをshoppingall.blade.phpに表示
             $products = Product::all();
 
-            // products_tableのpaginateメソッド
-            $products = Product::Paginate(9);
+        return view("farmer-product-register", ['products' => $products]);
+    }
 
-        return view("farmer-product-register", ['products' => $products],);
+    public function productAdd()
+    {
+        return view('farmer-product-register');
+    }
+    public function productCreate(ProductRequest $request)
+    {
+        $form = $request->all();
+        Product::create($form);
+        return redirect('/farmer/product/lists');
     }
 
 }

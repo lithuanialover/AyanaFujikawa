@@ -69,4 +69,11 @@ class ProductController extends Controller
         return redirect('/farmer/product/lists');
     }
 
+    public function productShow($id)
+    {
+        $products = Product::find($id);
+
+        return view('farmer-product-show', ['products' => $products]);
+    }
+
 }

@@ -3,6 +3,7 @@
 @section('main')
 
 <div class="cnt-top">
+  
   <table>
     <tr>
       <th>商品画像</th>
@@ -40,7 +41,7 @@
   <br>
   {{ $products->links() }}
   <div class="all-btn">
-      <a href="/farmer/product/register">商品登録ページへ</a>
+      <a href="/farmer/product/add">商品登録ページへ</a>
   </div>
   <div class="all-btn">
     <a href="/farmer/dashboard">ホーム画面へ</a>

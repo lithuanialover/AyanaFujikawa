@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;//追記
-use App\Models\Product;//追記
+use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
+use App\Models\Image;
 use Illuminate\Pagination\Paginator;//products_table Paginateメソッド
-use App\Http\Requests\ProductRequest;//追記
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -50,14 +51,6 @@ class ProductController extends Controller
         return view('farmer-product-lists', ['products' => $products]);
     }
 
-    public function farmerRegister(){
-
-            //products_tableをshoppingall.blade.phpに表示
-            $products = Product::all();
-
-        return view("farmer-product-register", ['products' => $products]);
-    }
-
     public function productAdd()
     {
         return view('farmer-product-register');
@@ -66,6 +59,21 @@ class ProductController extends Controller
     {
         $form = $request->all();
         Product::create($form);
+
+        /**画像保存 */
+        // ディレクトリ名
+        $dir = 'products';
+        // アップロードされたファイル名を取得
+        $file_name = $request->file('img')->getClientOriginalName();
+        // 取得したファイル名で保存
+        $request->file('img')->storeAs('public/img/' . $dir, $file_name);
+        
+        // ファイル情報をDBに保存
+        $image = new Image();
+        $image->name = $file_name;
+        $image->path = 'storage/' . $dir . '/' . $file_name;
+        $image->save();
+
         return redirect('/farmer/product/lists');
     }
 
@@ -76,17 +84,17 @@ class ProductController extends Controller
         return view('farmer-product-show', ['products' => $products]);
     }
 
-    public function productEdit($id)
+    public function productEdit($id)//更新
     {
         $products = Product::find($id);
 
         return view('farmer-product-edit', ['products' => $products]);
     }
 
-    public function productUpdate(Request $request, $id)
+    public function productUpdate(Request $request, $id)//更新
     {
         $products = Product::find($id);
-        // $updateProduct = $this->products->updateProduct($request, $products);
+        $updateProduct = $this->products->updateProduct($request, $products);
 
         return redirect()->route('product.show');
     }

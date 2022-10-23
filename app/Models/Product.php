@@ -22,4 +22,6 @@ class Product extends Model
     // Eloquent; モデルに関連付けるテーブル
     protected $table = 'products';
 
+    
+
 }

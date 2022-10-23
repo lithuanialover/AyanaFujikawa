@@ -22,6 +22,10 @@
             <p>{{$products->comments}}</p>
         </div>
         <div class="back-btn">
+            {{-- <a href="/farmer/product/edit/{id}">編集ページへ</a> --}}
+            <a href="{{ route('product.edit', ['id'=>$products->id]) }}">編集ページへ</a>
+          </div>
+        <div class="back-btn">
           <a href="/farmer/product/lists">一覧ページに戻る</a>
         </div>
   </div>

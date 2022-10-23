@@ -26,12 +26,12 @@
         </td>
         <td>
           <div class="all-btn">
-            <a href="/farmer/product/show/{{$product->id}}">編集</a>
+            <a href="/farmer/product/edit/{{$product->id}}">編集</a>
           </div>
         </td>
         <td>
           <div class="all-btn">
-            <a href="/farmer/product/show/{{$product->id}}">削除</a>
+            <a href="/farmer/product/delete/{{$product->id}}">削除</a>
           </div>
         </td>
       </tr>

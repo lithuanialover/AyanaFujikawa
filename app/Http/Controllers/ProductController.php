@@ -76,4 +76,19 @@ class ProductController extends Controller
         return view('farmer-product-show', ['products' => $products]);
     }
 
+    public function productEdit($id)
+    {
+        $products = Product::find($id);
+
+        return view('farmer-product-edit', ['products' => $products]);
+    }
+
+    public function productUpdate(Request $request, $id)
+    {
+        $products = Product::find($id);
+        // $updateProduct = $this->products->updateProduct($request, $products);
+
+        return redirect()->route('product.show');
+    }
+
 }

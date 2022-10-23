@@ -26,8 +26,8 @@ Route::get('/farmer/product/lists',[ProductController::class, 'productLists'])->
 Route::get('/farmer/product/add', [ProductController::class, 'productAdd'])->middleware('auth:farmer');
 Route::post('/farmer/product/add', [ProductController::class, 'productCreate'])->middleware('auth:farmer');
 Route::get('/farmer/product/show/{id}', [ProductController::class, 'productShow'])->name('product.show');
-
-
+Route::get('/farmer/product/edit/{id}', [ProductController::class, 'productEdit'])->name('product.edit');
+Route::post('/farmer/product/product/{id}', [ProductController::class, 'productUpdate'])->name('product.update');
 
 
 

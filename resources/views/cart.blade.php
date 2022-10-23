@@ -66,8 +66,7 @@
                               @csrf
                               <input type="hidden" value="{{ $item->id }}" name="id">
                               <button class="px-4 py-2 text-white bg-red-600 shadow rounded-full">x</button>
-                          </form>
-                            
+                            </form>
                           </td>
                         </tr>
                         @endforeach

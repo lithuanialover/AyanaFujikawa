@@ -1,6 +1,6 @@
 <header class="header flex-item">
 
-    <img src="img/logo-green.PNG" alt="kyovegロゴ" class="header-logo">
+    <img src="{{ asset('/img/logo-green.PNG') }}"  alt="kyovegロゴ" class="header-logo">
     <nav class="header-nav">
       <ul class="header-nav-list flex-item">
         <li class="header-li"><a href="/shopping/all" class="header-nav-item">Order Online</a></li>

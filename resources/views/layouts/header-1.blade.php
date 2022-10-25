@@ -1,5 +1,5 @@
 <header class="header flex-item">
-    <img src="img/logo-green.PNG" alt="KyoVegロゴ" class="header-logo">
+<img src="{{ asset('/img/logo-green.PNG') }}" alt="KyoVegロゴ" class="header-logo">
     <nav class="header-nav">
       <ul class="header-nav-list flex-item">
         <li class="header-li"><a href="/farmer/home" class="header-nav-item">Farmer</a></li>
